@@ -1,0 +1,20 @@
+# Vim
+Session.vim
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.cache
+*.eggs
+
+# Setuptools distribution folder.
+/dist/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
+
+# Anything under build is not wanted in git
+build/
