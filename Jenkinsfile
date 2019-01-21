@@ -21,7 +21,7 @@ node('docker') {
     stage('Sonar Analysis') { 
         def scannerHome = tool 'ADOP SonarScanner'
          withSonarQubeEnv('ADOP Sonar') {
-                    sh "${scannerHome}/bin/sonar-scanner -D sonar-project.properties"
+                    sh "${scannerHome}/bin/sonar-scanner"
             }
         
     }

@@ -1,0 +1,6 @@
+projectKey=com.tekmentors.PythonProject
+serverUrl=http://localhost:9000
+serverVersion=6.7.6.38781
+dashboardUrl=http://localhost:9000/dashboard/index/com.tekmentors.PythonProject
+ceTaskId=AWhxKuiGYCAxg1c9lKFB
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWhxKuiGYCAxg1c9lKFB
