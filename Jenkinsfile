@@ -19,7 +19,7 @@ node('docker') {
         junit 'build/results.xml'
     }
     stage('Sonar Analysis') { 
-        
+        def scannerHome = tool 'ADOP SonarScanner'
          withSonarQubeEnv('ADOP Sonar') {
                     sh "${scannerHome}/bin/sonar-scanner -D Sonarscanner.properties"
             }
