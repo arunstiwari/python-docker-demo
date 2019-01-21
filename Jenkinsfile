@@ -1,4 +1,5 @@
-node {
+node('docker') {
+
     stage('Cleanup') {
         step([$class: 'WsCleanup'])
     }
