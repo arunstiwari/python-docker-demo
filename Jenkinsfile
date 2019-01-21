@@ -18,4 +18,14 @@ node('docker') {
     stage('collect test results') {
         junit 'build/results.xml'
     }
+    stage('Sonar Analysis') { 
+         environment {
+             SONAR_SCANNER_OPTS = "-Xmx2g"
+             } 
+         steps {
+             def scannerHome = tool 'ADOP SonarScanner'
+                withSonarQubeEnv('SonarQube') {
+                    sh "${scannerHome}/bin/sonar-scanner -D Sonarscanner.properties"
+            }
+         }
 }
