@@ -19,11 +19,11 @@ node('docker') {
         junit 'build/results.xml'
     }
     stage('Sonar Analysis') { 
-         steps {
-                withSonarQubeEnv('ADOP Sonar') {
+        
+         withSonarQubeEnv('ADOP Sonar') {
                     sh "${scannerHome}/bin/sonar-scanner -D Sonarscanner.properties"
             }
-         }
+        
     }
    
 
