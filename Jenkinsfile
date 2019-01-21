@@ -24,10 +24,11 @@ node('docker') {
              } 
          steps {
              def scannerHome = tool 'ADOP SonarScanner'
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('ADOP Sonar') {
                     sh "${scannerHome}/bin/sonar-scanner -D Sonarscanner.properties"
             }
          }
-}
+    }
+   
 
 }
